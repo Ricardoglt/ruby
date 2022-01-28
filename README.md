@@ -8,3 +8,6 @@
 `bundle install`
 ### Rode os testes com:
 `rspec`
+### Se o comando acima não funcionar, instale o rspec com o comando abaixo:
+
+`gem install rspec`
