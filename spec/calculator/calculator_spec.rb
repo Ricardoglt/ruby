@@ -26,7 +26,7 @@ describe Calculator do
     end
   end
 
-  context 'subtração' do
+  context 'subtrair' do
     it 'com números positivos' do
       result = calc.subtrair(3,2)
       expect(result).to eq(1)
@@ -34,7 +34,7 @@ describe Calculator do
 
     it 'com números positivos e negativos' do
       result = calc.subtrair(-5, 7)
-      expect(result).to eq(12)
+      expect(result).to eq(-12)
     end
 
     it 'com números negativos' do
@@ -43,8 +43,96 @@ describe Calculator do
     end
 
     it 'com números reais' do
-      result = calc.subtrair(1.2, 1)
-      expect(result).to eq(0.1)
+      result = calc.subtrair(1.5, 1)
+      expect(result).to eq(0.5)
+    end
+  end
+
+  context 'multiplicar' do
+    it 'com números positivos' do
+      result = calc.multiplicar(3,2)
+      expect(result).to eq(6)
+    end
+
+    it 'com números positivos e negativos' do
+      result = calc.multiplicar(-5, 7)
+      expect(result).to eq(-35)
+    end
+
+    it 'com números negativos' do
+      result = calc.multiplicar(-5, -7)
+      expect(result).to eq(35)
+    end
+
+    it 'com números reais' do
+      result = calc.multiplicar(1.5, 1)
+      expect(result).to eq(1.5)
+    end
+  end
+
+  context 'dividir' do
+    it 'com números positivos' do
+      result = calc.dividir(4,2)
+      expect(result).to eq(2)
+    end
+
+    it 'com números positivos e negativos' do
+      result = calc.dividir(-4, 2)
+      expect(result).to eq(-2)
+    end
+
+    it 'com números negativos' do
+      result = calc.dividir(-4, -2)
+      expect(result).to eq(2)
+    end
+
+    it 'com números reais' do
+      result = calc.dividir(1.5, 1)
+      expect(result).to eq(1.5)
+    end
+  end
+
+  context 'exponenciação' do
+    it 'com números positivos' do
+      result = calc.exponenciação(5,2)
+      expect(result).to eq(25)
+    end
+
+    it 'com números positivos e negativos' do
+      result = calc.exponenciação(-5, 2)
+      expect(result).to eq(25)
+    end
+
+    it 'com números negativos' do
+      result = calc.exponenciação(-1, -1)
+      expect(result).to eq(-1)
+    end
+
+    it 'com números reais' do
+      result = calc.exponenciação(1.5, 2)
+      expect(result).to eq(2.25)
+    end
+  end
+
+  context 'módulo' do
+    it 'com números positivos' do
+      result = calc.módulo(5,2)
+      expect(result).to eq(1)
+    end
+
+    it 'com números positivos e negativos' do
+      result = calc.módulo(-5, 2)
+      expect(result).to eq(1)
+    end
+
+    it 'com números negativos' do
+      result = calc.módulo(-5, -2)
+      expect(result).to eq(-1)
+    end
+
+    it 'com números reais' do
+      result = calc.módulo(3, 1.5)
+      expect(result).to eq(0)
     end
   end
 end
